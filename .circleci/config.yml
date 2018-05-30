@@ -9,10 +9,10 @@ jobs:
       - run: |
           mkdir output
           echo "hello world" > output/message.txt
-       - persist_to_workspace:
-           root: output
-           paths:
-             - message.txt
+      - persist_to_workspace:
+          root: output
+          paths:
+           - message.txt
   testa:
     docker: 
       - image: circleci/python:2-jessie
