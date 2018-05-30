@@ -6,11 +6,9 @@ jobs:
       - image: circleci/python:2-jessie
     steps:
       - checkout
-      - run: 
-          name: Compile Code
-          command: |
-            mkdir output
-            echo "hello world" > output/message.txt
+      - run: |
+          mkdir output
+          echo "hello world" > output/message.txt
        - persist_to_workspace:
            root: output
            paths:
